@@ -11,5 +11,6 @@
 <img src="/src/img/products-home.png" alt="homePages">
 </br>
  :shipit: User can logout by clicking top-right on the navigation bar
+ </br>
 <img src="/src/img/logOut.png" alt="logOuts">
 
