@@ -4,10 +4,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
 
-
-
-
-
 const LoginPage = () => {
 
     // hook form
@@ -39,7 +35,8 @@ const LoginPage = () => {
     return (
         <div className="centered" id="login">
             <h3>Registration form</h3>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <span className="badge bg-success text-white p-2">You must log in to view the page at /protected or getting full features</span>
+            <form className="mt-3" onSubmit={handleSubmit(onSubmit)}>
                 <input className="form-control w-100" placeholder="user name : shakil_123" {...register("User_name", { required: true })} />
                 {errors.User_name && <span>This field is required</span>}
                 <br />
@@ -57,7 +54,7 @@ const LoginPage = () => {
                     <input className="btn btn-success" type="submit" />
                 </div>
             </form>
-            <h6 className="text-center mt-3">signin and signup as <Link to="/user/login"> Login ?</Link>
+            <h6 className="text-center mt-3">Have an account, <Link to="/user/login"> Login ?</Link>
             </h6>
 
             <ToastContainer

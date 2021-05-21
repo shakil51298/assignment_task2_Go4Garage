@@ -1,9 +1,16 @@
 import { FormControl } from '@material-ui/core';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Form, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { userContext } from '../../App';
 
 const Navigationbar = () => {
+    const [loggedInUser , setLoggedInUser] = useContext(userContext);
+
+    const handleLogOut = () => {
+        setLoggedInUser('');
+        alert("logged out Succesfully")
+    }
     return (
         <Navbar bg="light" expand="lg">
             <Navbar.Brand href="#home">Go4Garage</Navbar.Brand>
@@ -15,6 +22,9 @@ const Navigationbar = () => {
                     </Nav.Link>
                     <Nav.Link>
                         <Link to="/user/signup">SignUp</Link>
+                    </Nav.Link>
+                    <Nav.Link>
+                        <Link onClick={handleLogOut}>log Out</Link>
                     </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
