@@ -3,7 +3,7 @@
 
 ### `Reistration or signup first if not already`
 <img src="/src/img/signUp.png" alt="signUpPages">
-### `If have an account you can go login by clicking "login"`
+### `If have an account you can go login by clicking login `
 <img src="/src/img/LoginPage.png" alt="signinPages">
 ### `Login or signup, redirect to home page/product page`
 <img src="/src/img/products-home.png" alt="homePage">
